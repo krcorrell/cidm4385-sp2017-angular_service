@@ -4,6 +4,8 @@
 	</head>
 	<body>
 		<h1>Converter App</h1>
+		<h2>Volume</h2>
+		<h3>Metric</h3>
 		<div ng-controller="UnitConverterController as ucc">
 			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
             <select ng-model="ucc.selected_metric_volume_unit" 
@@ -14,8 +16,64 @@
 			<div>
 				<p>Selected unit is: <span ng-bind="ucc.selected_metric_volume_unit.unit_name"></span></p>
 			</div>
+			<h3>Imperial</h3>
+			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
+            <select ng-model="ucc.selected_imperial_volume_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_volume_units" 
+                    ng-change="ucc.showSelectedUnit()"></select>
+			
+			<!--<select>-->
+			<div>
+				<p>Selected unit is: <span ng-bind="ucc.selected_imperial_volume_unit.unit_name"></span></p>
+			</div>
+			<input type="submit" value="Submit" />
+			<h2>Mass</h2>
+			<h3>Metric</h3>
+			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
+            <select ng-model="ucc.selected_metric_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.metric_mass_units" 
+                    ng-change="ucc.showSelectedUnit()"></select>
+			
+			<!--<select>-->
+			<div>
+				<p>Selected unit is: <span ng-bind="ucc.selected_metric_mass_unit.unit_name"></span></p>
+			</div>
+			<h3>Imperial</h3>
+			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
+            <select ng-model="ucc.selected_imperial_mass_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_mass_units" 
+                    ng-change="ucc.showSelectedUnit()"></select>
+			
+			<!--<select>-->
+			<div>
+				<p>Selected unit is: <span ng-bind="ucc.selected_imperial_mass_unit.unit_name"></span></p>
+			</div>
+			<input type="submit" value="Submit" />
+			
+			<h2>Length</h2>
+			<h3>Metric</h3>
+			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
+            <select ng-model="ucc.selected_metric_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.metric_length_units" 
+                    ng-change="ucc.showSelectedUnit()"></select>
+			
+			<!--<select>-->
+			<div>
+				<p>Selected unit is: <span ng-bind="ucc.selected_metric_length_unit.unit_name"></span></p>
+			</div>
+			<h3>Imperial</h3>
+			<input type="text" ng-model="ucc.lengthValue" id="Length_value" name="VALUE" placeholder="Enter amount">
+            <select ng-model="ucc.selected_imperial_length_unit" 
+                    ng-options="unit.unit_name for unit in ucc.imperial_length_units" 
+                    ng-change="ucc.showSelectedUnit()"></select>
+			
+			<!--<select>-->
+			<div>
+				<p>Selected unit is: <span ng-bind="ucc.selected_imperial_length_unit.unit_name"></span></p>
+			</div>
+			<input type="submit" value="Submit" />
 		</div>
-        <script src="angular.js"></script>
+        <script src="angular.min.js"></script>
         <script src="app.js"></script>	
 	</body>
 </html>
